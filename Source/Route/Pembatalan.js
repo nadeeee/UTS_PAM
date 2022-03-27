@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import FontAwsome from 'react-native-vector-icons/FontAwesome';
 
 function Pembatalan() {
   return (
@@ -12,6 +13,7 @@ function Pembatalan() {
           Tidak Ada Aktivitas Pembatalan Tiket
         </Text>
       </View>
+      <FontAwsome name="ban" size={80} color="#024D88" />
     </View>
   );
 }
@@ -21,7 +23,7 @@ const formStyle = StyleSheet.create({
     height: 100,
     width: '100%',
     marginBottom: 20,
-    marginTop: -620,
+    marginTop: -510,
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -10,7 +10,6 @@ import {
   Alert,
 } from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-// import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwsome from 'react-native-vector-icons/FontAwesome';
 import SelectDropdown from 'react-native-select-dropdown';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -171,7 +170,7 @@ function SearchPage({navigation}) {
               size={20}
               color="white"
             />
-            <Text style={formStyle.txtbutton}>Cari Tiket</Text>
+            <Text style={formStyle.txtbutton}>Buat Tiket</Text>
           </Pressable>
         </View>
       </ScrollView>
@@ -187,7 +186,7 @@ function ResultPage({route, navigation}) {
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <View style={formStyle.box}>
         <Text style={formStyle.judul}> KAPALZY</Text>
-        <Text style={formStyle.kouta}>Kouta tersedia (10000)</Text>
+        <Text style={formStyle.kouta}>Kouta tersedia (100)</Text>
         <Text style={formStyle.rincian}>Rincian Tiket</Text>
         <View style={formStyle.boxrincian}>
           <Text style={formStyle.awal}>Bakauheni</Text>
@@ -216,7 +215,7 @@ function ResultPage({route, navigation}) {
               navigation.navigate('SearchPage');
             }}
             style={formStyle.kembali}>
-            <Text>Kembali</Text>
+            <Text style={formStyle.txtbutton1}>Kembali</Text>
           </Pressable>
           <Pressable
             onPress={() => {
@@ -397,8 +396,8 @@ const formStyle = StyleSheet.create({
   boxrincian: {
     paddingLeft: 20,
     paddingRight: 20,
-    backgroundColor: '#EEEEEE',
-    borderRadius: 3,
+    backgroundColor: '#E9E9E9',
+    borderRadius: 4,
     marginLeft: -25,
     padding: 50,
     width: '120%',
@@ -419,6 +418,7 @@ const formStyle = StyleSheet.create({
       marginLeft: 160,
     },
     orang: {
+      borderTopWidth: 1,
       fontSize: 12,
       marginTop: 15,
       marginBottom: -30,
@@ -469,12 +469,13 @@ const formStyle = StyleSheet.create({
   },
   kembali: {
     backgroundColor: '#ffffff',
-    borderColor: '#000000',
     width: '40%',
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 4,
+    borderWidth: 1,
+    borderWidthColor: '#00579c',
   },
   head: {
     fontSize: 15,
@@ -562,6 +563,11 @@ const formStyle = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: 'center',
+  },
+  txtbutton1: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#00579c',
   },
 });
 
